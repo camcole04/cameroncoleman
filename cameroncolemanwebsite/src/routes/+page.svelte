@@ -2,12 +2,13 @@
     import linkedinlogo from '$lib/assets/linkedin.svg';
     import githublogo from '$lib/assets/githublogo.png';
     import brushstroke from '$lib/assets/brushstroke.png';
+    import emailicon from '$lib/assets/emailicon.png';
 </script>
 
 <div >
     
     
-    <div class="centered title-box">
+    <div class="centered page-box">
         <div class="centered menu-title">
             <p>CAMERON COLEMAN</p>
             <p class="subtitle">4th Year Software Engineer | Rochester Institute of Technology</p>
@@ -24,10 +25,15 @@
                     style="width:42px;height:42px;"
                     alt="Cameron's GitHub">
             </a>
+            <a href="mailto:nycolemans04@outlook.com">
+                <img 
+                    src={emailicon}
+                    style="width:42px;height:42px;"
+                    alt="Send me an email!">
+            </a>
             </div>
         </div>
             <div class="section-title-background" style="background-image: url({ brushstroke });" >
-                
                 <p class="section-title"><a href="/aboutme">ABOUT ME </a> </p>
             </div>
             <div class="section-title-background" style="background-image: url({ brushstroke });">
@@ -41,22 +47,11 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
-
-    
+    @import '$lib/styles.css';
 
     .centered {
-        margin: 0 auto;
-    }
-
-    .title-box {
-        padding: 100px 250px 50px 250px;
-        height: 1300px;
-        margin-top: 50px;
-        width: fit-content;
-        background-color: #70D6FF;
-        font-family: 'Alegreya Sans', sans-serif;
-        z-index: 1;
-        position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .menu-title {
@@ -111,21 +106,6 @@
         margin-left: 40%;
     }
 
-    a {
-        color: black;
-        text-decoration:none;
-    }
-
-    a:visited {
-        color: black;
-    }
-
-    a:active {
-        color: black;
-    }
-
-    a:hover {
-        color: black;
-    }
+    
 
 </style>

@@ -1,0 +1,42 @@
+.page-box {
+    padding: 100px 250px 2500px 250px;
+    height: 1300px;
+    margin: 50px 200px 50px 200px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 80%; */
+    background-color: #70D6FF;
+    font-family: 'Alegreya Sans', sans-serif;
+    z-index: 1;
+    position: relative;
+}
+
+.section-title-background {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+    padding-top: 10px; 
+    background-size: 350px 90px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+a {
+        color: black;
+        text-decoration:none;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    a:active {
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
