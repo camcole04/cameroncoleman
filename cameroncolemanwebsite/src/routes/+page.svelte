@@ -11,6 +11,18 @@
     import jsLogo from '$lib/assets/language_logos/javascript.png';
     import pgLogo from '$lib/assets/language_logos/postgresql.png';
     import pythonLogo from '$lib/assets/language_logos/python.png';
+    import javaLogo from '$lib/assets/language_logos/java.png';
+    import svelteLogo from '$lib/assets/language_logos/svelte.png';
+    import kotlinLogo from '$lib/assets/language_logos/kotlin.png';
+
+    import angularLogo from '$lib/assets/framework_logos/angular.png';
+    import bootstrapLogo from '$lib/assets/framework_logos/bootstrap.png';
+    import dockerLogo from '$lib/assets/framework_logos/docker.png';
+    import flaskLogo from '$lib/assets/framework_logos/flask.svg';
+    import gitLogo from '$lib/assets/framework_logos/git.png';
+    import nodejsLogo from '$lib/assets/framework_logos/nodejs.png';
+    import reactLogo from '$lib/assets/framework_logos/react.png';
+    import springLogo from '$lib/assets/framework_logos/spring.png';
 </script>
 
 <div>
@@ -41,16 +53,22 @@
 
         </div>
         
-        <p class="section-title"><a href="/aboutme">ABOUT ME </a> </p>
+        <p class="section-title" style="margin-bottom: 120px; margin-top: 120px;"><a href="/aboutme">ABOUT ME </a> </p>
         
-        <div class="section-title-background" style="background-image: url({ brushstroke });">
-            <p class="section-title">PROJECTS </p>
-        </div>
-        <p class="project"><a href="/projects/midiaudioplayer">Midi Audio Player</a> </p>
+        <p class="section-title">PROJECTS </p>
+
+        <hr class="section-divider" />
+        
+        <p class="project"><a href="/projects/midiaudioplayer">Midi Audio Microcontroller</a> </p>
+        <p class="project"><a href="/projects/midiaudioplayer">Ultrasonic Musical Note Recognition Game</a> </p>
+        <p class="project"><a href="/projects/midiaudioplayer">Hermes Navigation System (Front End)</a> </p>
+
+        
 
         <!-- New Teck Stack Section -->
         <div class="teck-stack-section">
             <p class="section-title">Tech Stack</p>
+            <hr class="section-divider" />
             <div class="subsection">
                 <p class="subsection-title">Technical Languages</p>
                 <div class="language-logos">
@@ -61,14 +79,27 @@
                     <img src={jsLogo} alt="JavaScript" />
                     <img src={pgLogo} alt="PostgreSQL" />
                     <img src={pythonLogo} alt="Python" />
+                    <img src={javaLogo} alt="Java" />
+                    <img src={kotlinLogo} alt="Kotlin" />
                 </div>
             </div>
             <div class="subsection">
                 <p class="subsection-title">Frameworks</p>
-                <!-- Frameworks later -->
+                <div class="language-logos">
+                    <img src={svelteLogo} alt="Svelte" />
+                    <img src={angularLogo} alt="Angular" />
+                    <img src={bootstrapLogo} alt="Bootstrap" />
+                    <img src={dockerLogo} alt="Docker" />
+                    <img src={flaskLogo} alt="Flask" />
+                    <img src={gitLogo} alt="Git" />
+                    <img src={nodejsLogo} alt="Node.js" />
+                    <img src={reactLogo} alt="React" />
+                    <img src={springLogo} alt="Spring" />
+                </div>
             </div>
         </div>
     </div>
+
 </div>
 
 <style>
@@ -106,15 +137,16 @@
         color: #5a3e1b; /* dark brown */
         text-align: center;
         margin-top: 0;
-        /* margin-bottom: 30px; */
+        margin-bottom: 30px;
         font-style: italic;
     }
 
     .section-title {
         margin: auto;
         font-family: 'Palatino', serif;
-        margin-bottom: 30px;
-        font-size: 48px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        font-size: 76px;
         color: #8b4513;
         width: fit-content;
         text-align: center;
@@ -133,41 +165,27 @@
         text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
-    .section-title-background {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-        align-items: center;
-        padding-top: 10px; 
-        background-size: 350px 90px;
-        background-repeat: no-repeat;
-        background-position: 50%;
-    }
-
-    .section-title-background:hover {
-        filter: sepia(1) hue-rotate(10deg) brightness(0.8);
-        cursor: pointer;
-    }
-
     .project {
-        margin: auto;
+        margin: 20px auto;
         font-family: 'Palatino', serif;
-        font-size: 24px;
-        margin-top: -40px;
+        font-size: 36px;
         width: fit-content;
         color: #5a3e1b;
     }
 
     .project a {
         color: #5a3e1b;
+        transition: transform 0.3s ease, filter 0.3s ease, text-shadow 0.3s ease;
+        display: inline-block;
         text-decoration: none;
-        border-bottom: 1px dotted #8b4513;
     }
 
     .project a:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+        cursor: pointer;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
         color: #a0522d;
-        border-bottom: 1px solid #a0522d;
     }
 
     .links {
@@ -214,13 +232,12 @@
         text-align: center;
     }
 
-    /* New styles for Teck Stack section */
     .teck-stack-section {
         margin-top: 60px;
     }
 
     .subsection {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         text-align: center;
     }
 
@@ -239,8 +256,9 @@
     }
 
     .language-logos img {
-        width: 128px;
-        height: 128px;
+        width: 140px;
+        height: 140px;
+        margin-right: 25px;
         object-fit: contain;
         transition: filter 0.3s ease;
         cursor: default;
@@ -258,5 +276,14 @@
     .language-logos img:hover {
         filter: none;
         animation: bob 0.6s ease-in-out infinite;
+    }
+
+    .section-divider {
+        border: none;
+        border-top: 4px solid #d2b48c; /* tan color */
+        width: 75%;
+        margin-bottom: 0px;
+        margin-top: -120px;
+        /* margin: 10px auto; */
     }
 </style>

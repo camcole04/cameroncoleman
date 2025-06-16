@@ -1,5 +1,76 @@
 <script>
+	import { onMount } from 'svelte';
+
+	import assemblyLogo from '$lib/assets/language_logos/assembly.png';
+	import cLogo from '$lib/assets/language_logos/C.png';
+	import cssLogo from '$lib/assets/language_logos/CSS.png';
+	import htmlLogo from '$lib/assets/language_logos/HTML.png';
+	import javaLogo from '$lib/assets/language_logos/java.png';
+	import jsLogo from '$lib/assets/language_logos/javascript.png';
+	import pgLogo from '$lib/assets/language_logos/postgresql.png';
+	import pythonLogo from '$lib/assets/language_logos/python.png';
+	import svelteLogo from '$lib/assets/language_logos/svelte.png';
+
 	let { children } = $props();
+
+	const logos = [
+		assemblyLogo,
+		cLogo,
+		cssLogo,
+		htmlLogo,
+		javaLogo,
+		jsLogo,
+		pgLogo,
+		pythonLogo,
+		svelteLogo
+	];
+
+	let logoInstances = $state([]);
+
+	function randomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	onMount(() => {
+		const instancesCount = 20;
+		const logoWidth = 80;
+		const logoHeight = 80;
+		const placedLogos = [];
+
+		function isOverlapping(x, y) {
+			return placedLogos.some(pos => {
+				return !(
+					x + logoWidth < pos.x ||
+					x > pos.x + logoWidth ||
+					y + logoHeight < pos.y ||
+					y > pos.y + logoHeight
+				);
+			});
+		}
+
+		const instances = [];
+
+		for (let i = 0; i < instancesCount; i++) {
+			let x, y;
+			let attempts = 0;
+			do {
+				x = randomInt(230, window.innerWidth - logoWidth);
+				y = randomInt(0, window.innerHeight - logoHeight);
+				attempts++;
+			} while (isOverlapping(x, y) && attempts < 100);
+
+			placedLogos.push({ x, y });
+
+			instances.push({
+				src: logos[randomInt(0, logos.length - 1)],
+				x,
+				y,
+				rotation: randomInt(0, 360)
+			});
+		}
+
+		logoInstances = instances;
+	});
 </script>
 
 <nav class="menu-nav">
@@ -9,7 +80,26 @@
 	<a class="menu-link" href="/projects" style="margin-bottom: 40px;">PROJECTS</a>
 </nav>
 
-{@render children()}
+<div class="page-content">
+	{@render children()}
+</div>
+
+<div class="background-logos">
+	{#each logoInstances as logo}
+		<img
+			src={logo.src}
+			alt="language logo"
+			class="logo"
+			style="top: {logo.y}px; left: {logo.x}px; transform: rotate({logo.rotation}deg);"
+		/>
+		<img
+			src={logo.src}
+			alt="language logo"
+			class="logo"
+			style="top: {logo.y}px; left: {logo.x}px; transform: rotate({logo.rotation}deg);"
+		/>
+	{/each}
+</div>
 
 <style>
     @import '$lib/styles.css';
@@ -25,6 +115,7 @@
         box-shadow: 4px 0 10px rgba(0,0,0,0.1);
         border-right: 2px solid #d2b48c; /* tan for border */
         font-family: 'Georgia', serif;
+        z-index: 10;
     }
 
     .menu-header {
@@ -52,4 +143,30 @@
         color: #a0522d; /* sienna */
         text-decoration: underline;
     }
+
+	.background-logos {
+		position: fixed;
+		top: 0;
+		/* left: 220px; start after menu */
+		width: calc(100vw);
+		height: 100vh;
+		pointer-events: none;
+		overflow: hidden;
+		z-index: 0;
+	}
+
+	.background-logos .logo {
+		position: absolute;
+		width: 160px;
+		height: 160px;
+		/* filter: grayscale(100%); */
+		opacity: 0.25;
+		user-select: none;
+		will-change: transform;
+	}
+
+	.page-content {
+		position: relative;
+		z-index: 2;
+	}
 </style>

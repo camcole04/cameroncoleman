@@ -16,8 +16,12 @@
             </span>
             <br><br/>
             I am a motivated <span style="color: green">Software Engineer</span> with a passion for developing products that can improve the lives of others.
-            <br><br/><br><br/>
+            
+            <br><br/>
+            <hr class="section-divider" style="width:100%;">
+            <br><br/>
         </h3>
+        
         
         <h2 class="description"> As a 4th year Software Engineering major at the
             Rochester Institute of Technology, I am constantly looking to improve my understanding of various fields of computer software. 
@@ -28,12 +32,12 @@
             My goal is to use the knowledge and skills I have gained to contribute in solving these problems.
             <br><br/>
         </h2>
+        
 
         <div class="header" style="margin-bottom: -100px">
             <br><br/>
-            <div class="section-title-background" style="background-image: url({ brushstroke });">
             SKILLS
-            </div>
+            <hr class="section-divider">
             <br><br/>
         </div>
 
@@ -50,9 +54,8 @@
 
         <div class="header" style="margin-bottom: -100px">
             <br><br/>
-            <div class="section-title-background" style="background-image: url({ brushstroke });">
             INTERESTS 
-            </div>
+            <hr class="section-divider">
             <br><br/>
         </div>
 
@@ -114,6 +117,7 @@
         display: flex;
         flex-direction: column;
         font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #5a3e1b; /* dark brown */
         font-size: 48px;
         margin-top: -40px;
         width: fit-content;
@@ -144,5 +148,12 @@
     .centered {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .section-divider {
+        border: none;
+        border-top: 4px solid #d2b48c; /* tan color */
+        width: 75%;
+        margin: 10px auto;
     }
 </style>
