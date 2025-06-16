@@ -122,4 +122,27 @@
     }
 
     .description {
-        
+        margin: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 28px;
+        margin-top: -40px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .page-box {
+        padding: 60px 40px 80px 40px;
+        margin: 50px auto;
+        width: 60%;
+        background-color: #fdf6e3; /* light cream */
+        border: 2px solid #d2b48c; /* tan for border */
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(210, 180, 140, 0.5);
+        font-family: 'Palatino', serif;
+    }
+
+    .centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
