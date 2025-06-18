@@ -54,7 +54,26 @@
 			let x, y;
 			let attempts = 0;
 			do {
-				x = randomInt(230, window.innerWidth - logoWidth);
+				x = randomInt(0, 330 - logoWidth);
+				y = randomInt(0, window.innerHeight - logoHeight);
+				attempts++;
+			} while (isOverlapping(x, y) && attempts < 100);
+
+			placedLogos.push({ x, y });
+
+			instances.push({
+				src: logos[randomInt(0, logos.length - 1)],
+				x,
+				y,
+				rotation: randomInt(0, 360)
+			});
+		}
+
+		for (let i = 0; i < instancesCount; i++) {
+			let x, y;
+			let attempts = 0;
+			do {
+				x = randomInt(1700, window.innerWidth - logoWidth);
 				y = randomInt(0, window.innerHeight - logoHeight);
 				attempts++;
 			} while (isOverlapping(x, y) && attempts < 100);
@@ -86,12 +105,6 @@
 
 <div class="background-logos">
 	{#each logoInstances as logo}
-		<img
-			src={logo.src}
-			alt="language logo"
-			class="logo"
-			style="top: {logo.y}px; left: {logo.x}px; transform: rotate({logo.rotation}deg);"
-		/>
 		<img
 			src={logo.src}
 			alt="language logo"
