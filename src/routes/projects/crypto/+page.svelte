@@ -1,0 +1,134 @@
+<script>
+    import githublogo from '$lib/assets/githublogo.png';
+</script>
+
+<div class="centered">
+    <div class="page-box">
+        <h1 class="menu-title">Text/Image Crypto Device (Full Stack)</h1>
+        <div class="icon-container">
+            <a href="https://github.com/camcole04/ImageEncoder">
+                <img 
+                    src={githublogo}
+                    class="icon"
+                    alt="Cameron's GitHub">
+                Check Out The Git!
+            </a>
+        </div>
+        <hr class="section-divider">
+        <h3 class="header">
+            Designed software to encrypt and decrypt text and images. Text encryption uses a simple Vigenere cipher, while image encryption uses AES encryption.
+            <br/><br/>
+        </h3>
+
+        <div class="media-placeholders">
+            <div class="image-placeholder">
+                <p>Image of the device will go here</p>
+            </div>
+            <div class="video-placeholder">
+                <p>Video of the device will go here</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+    @import '$lib/styles.css';
+
+    .icon {
+        width: 42px;
+        height: 42px;
+        filter: grayscale(100%) sepia(60%) hue-rotate(10deg) saturate(500%) brightness(90%);
+        transition: filter 0.3s ease;
+        margin-bottom: -8px;
+    }
+
+    .menu-title {
+        color: #8b4513; /* saddle brown */
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 60px;
+        width: fit-content;
+    }
+
+    .page-box {
+        padding: 60px 40px 80px 40px;
+        margin: 50px auto;
+        width: 60%;
+        background-color: #fdf6e3; /* warm cream */
+        border: 2px solid #d2b48c; /* tan border */
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(210, 180, 140, 0.5);
+        font-family: 'Palatino', serif;
+    }
+
+    .header {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .media-placeholders {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .image-placeholder, .video-placeholder {
+        border: 3px dashed #FF70A6;
+        border-radius: 15px;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        color: #FF70A6;
+        background-color: #fff0f5;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .section-divider {
+        border: none;
+        border-top: 4px solid #d2b48c; /* tan color */
+        width: 75%;
+        margin: 10px auto;
+        margin-bottom: 50px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        max-width: fit-content;
+        margin: auto;
+        font-size: 30px;
+        font-family: 'Palatino', serif;
+        border: 3px solid #8b4513; /* saddle brown */
+        border-radius: 10px;
+        background-color: #d2b48c;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .links a {
+        transition: transform 0.3s ease, filter 0.3s ease, text-shadow 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .links a:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+        cursor: pointer;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+</style>

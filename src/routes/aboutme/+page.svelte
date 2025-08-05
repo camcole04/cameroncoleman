@@ -10,7 +10,7 @@
         <h3 class="header"> 
             <br><br/>Hey! My name is 
             <span style="color: blue; margin-bottom: -60px">
-                <div class="section-title-background" style="background-image: url({ brushstroke }); margin-bottom: -40px">
+                <div class="section-title-background" style="font-size: 80px; margin-bottom: -40px">
                 Cameron Coleman
                 </div>
             </span>

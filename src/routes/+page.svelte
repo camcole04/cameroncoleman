@@ -60,16 +60,15 @@
         <hr class="section-divider" />
         
         <p class="project"><a href="/projects/midiaudioplayer">Midi Audio Microcontroller</a> </p>
-        <p class="project"><a href="/projects/midiaudioplayer">Ultrasonic Musical Note Recognition Game</a> </p>
+        <p class="project"><a href="/projects/noterecgame">Ultrasonic Musical Note Recognition Game</a> </p>
         <p class="project"><a href="/projects/midiaudioplayer">Hermes Navigation System (Front End)</a> </p>
+        <p class="project"><a href="/projects/crypto">Text/Image Crypto Device (Full Stack)</a> </p>
 
         
-
-        <!-- New Teck Stack Section -->
         <div class="teck-stack-section">
             <p class="section-title">Tech Stack</p>
             <hr class="section-divider" />
-            <div class="subsection">
+        <div class="subsection">
                 <p class="subsection-title">Technical Languages</p>
                 <div class="language-logos">
                     <img src={assemblyLogo} alt="Assembly" />
