@@ -1,5 +1,9 @@
 {
-"rewrites": [
-    {"source": "/(.*)", "destination": "/"}
-]
+  "buildCommand": "vite build",
+  "outputDirectory": "build",
+  "devCommand": "vite dev",
+  "installCommand": "npm install",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
