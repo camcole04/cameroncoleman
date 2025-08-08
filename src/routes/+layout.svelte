@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import MobileModal from '$lib/components/MobileModal.svelte';
 
 	import assemblyLogo from '$lib/assets/language_logos/assembly.png';
 	import cLogo from '$lib/assets/language_logos/C.png';
@@ -103,6 +104,8 @@
 	{@render children()}
 </div>
 
+<MobileModal />
+
 <div class="background-logos">
 	{#each logoInstances as logo}
 		<img
@@ -124,7 +127,7 @@
         background-color: #f5f1e9; /* light cream */
         padding: 40px 30px;
         height: 100vh;
-        width: 220px;
+        width: 10vw;
         box-shadow: 4px 0 10px rgba(0,0,0,0.1);
         border-right: 2px solid #d2b48c; /* tan for border */
         font-family: 'Georgia', serif;
@@ -133,7 +136,8 @@
 
     .menu-header {
         font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-        font-size: 48px;
+        /* font-size: 48px; */
+		font-size: 2vw;
         color: #8b4513; /* brown */
         margin-bottom: 60px;
         text-align: center;
@@ -144,13 +148,24 @@
 
     .menu-link {
         font-family: 'Georgia', serif;
-        font-size: 28px;
+        /* font-size: 28px; */
+		font-size: 1.75vw;
         color: #5a3e1b; /* dark brown */
         text-decoration: none;
         margin-bottom: 30px;
         text-align: center;
         transition: color 0.3s ease;
     }
+
+	/* @container sidebar (max-width: 10vw) {
+		.menu-header {
+			font-size: 2vw;
+		}
+
+		.menu-link {
+			font-size: 3em;
+		}
+	} */
 
     .menu-link:hover {
         color: #a0522d; /* sienna */
