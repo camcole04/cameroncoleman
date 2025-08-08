@@ -9,7 +9,7 @@
             const isMobile = window.innerWidth <= 768;
             if (isMobile) {
                 // check if user has already seen the modal
-                const hasSeenModal = false;//localStorage.getItem('mobileModalSeen');
+                const hasSeenModal = localStorage.getItem('mobileModalSeen');
                 if (!hasSeenModal) {
                     showModal = true;
                 }
