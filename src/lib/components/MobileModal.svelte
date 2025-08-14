@@ -17,6 +17,7 @@
         };
         
         checkMobile();
+        
         window.addEventListener('resize', checkMobile);
         
         return () => {
