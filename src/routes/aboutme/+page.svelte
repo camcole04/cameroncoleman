@@ -60,7 +60,7 @@
         </div>
 
         <h2 class="description"> 
-            My favorite hobbies are Rock Climbing, Skateboarding, and Cooking. I took inspiration from restaurants menus to design this website!
+            My favorite hobbies are Rock Climbing, Skateboarding, and Cooking. I took inspiration from restaurant menus to design this website!
             <br><br/>
             In my free time I like to read and play video games. My favorite book is House of Leaves by Mark Z. Danielewski and I can't really pin down my favorite video game.
             <br><br/>
