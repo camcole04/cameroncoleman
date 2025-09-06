@@ -86,17 +86,4 @@
         padding: 5px;
         margin-top: 10px;
     }
-
-    .links a {
-        transition: transform 0.3s ease, filter 0.3s ease, text-shadow 0.3s ease;
-        display: inline-block;
-        text-decoration: none;
-    }
-    
-    .links a:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
-        cursor: pointer;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    }
 </style>
