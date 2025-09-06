@@ -6,7 +6,7 @@
     <div class="page-box">
         <h1 class="menu-title">Text/Image Crypto Device (Full Stack)</h1>
         <div class="icon-container">
-            <a href="https://github.com/camcole04/ImageEncoder">
+            <a href="https://github.com/camcole04/nes65emu">
                 <img 
                     src={githublogo}
                     class="icon"
@@ -16,7 +16,7 @@
         </div>
         <hr class="section-divider">
         <h3 class="header">
-            Designed software to encrypt and decrypt text and images. Text encryption uses a simple Vigenere cipher, while image encryption uses AES encryption.
+            Developing a custom NES emulator in Rust by implementing a 6502 CPU, memory bus, and opcode execution pipeline from the ground up. Gained hands-on experience with low-level systems programming, memory management, CPU architecture, and modular Rust design
             <br/><br/>
         </h3>
     </div>
