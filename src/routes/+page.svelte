@@ -69,7 +69,7 @@
             <p class="section-title">Tech Stack</p>
             <hr class="section-divider" />
         <div class="subsection">
-                <p class="subsection-title">Technical Languages</p>
+                <p class="subsection-title">Programming Languages and Databases</p>
                 <div class="language-logos">
                     <img src={assemblyLogo} alt="Assembly" />
                     <img src={cLogo} alt="C" />
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="subsection">
-                <p class="subsection-title">Frameworks</p>
+                <p class="subsection-title">Frameworks & Tools</p>
                 <div class="language-logos">
                     <img src={svelteLogo} alt="Svelte" />
                     <img src={angularLogo} alt="Angular" />
