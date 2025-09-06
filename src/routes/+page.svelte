@@ -55,14 +55,13 @@
         
         <p class="section-title" style="margin-bottom: 120px; margin-top: 120px;"><a href="/aboutme">ABOUT ME </a> </p>
         
-        <p class="section-title">PROJECTS </p>
+        <p id="projects" class="section-title">PROJECTS </p>
 
         <hr class="section-divider" />
         
         <p class="project"><a href="/projects/nesemu">8-bit Nintendo Entertainment System Emulator</a> </p>
         <p class="project"><a href="/projects/midiaudioplayer">Midi Audio Microcontroller</a> </p>
         <p class="project"><a href="/projects/noterecgame">Ultrasonic Musical Note Recognition Game</a> </p>
-        <p class="project"><a href="/projects/midiaudioplayer">Hermes Navigation System (Front End)</a> </p>
         <p class="project"><a href="/projects/crypto">Text/Image Crypto Device (Full Stack)</a> </p>
 
         

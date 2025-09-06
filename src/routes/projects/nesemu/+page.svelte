@@ -4,7 +4,7 @@
 
 <div class="centered">
     <div class="page-box">
-        <h1 class="menu-title">Text/Image Crypto Device (Full Stack)</h1>
+        <h1 class="menu-title">8-bit Nintendo Entertainment System Emulator</h1>
         <div class="icon-container">
             <a href="https://github.com/camcole04/nes65emu">
                 <img 
