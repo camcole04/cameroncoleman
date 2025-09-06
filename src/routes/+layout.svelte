@@ -97,7 +97,7 @@
 	<h2 class="menu-header">QUICK LINKS</h2>
 	<a class="menu-link" href="/" style="margin-bottom: 40px;">HOME</a>
 	<a class="menu-link" href="/aboutme" style="margin-bottom: 40px;">ABOUT ME</a>
-	<a class="menu-link" href="/projects" style="margin-bottom: 40px;">PROJECTS</a>
+	<a class="menu-link" href="/#projects" style="margin-bottom: 40px;">PROJECTS</a>
 </nav>
 
 <div class="page-content">
